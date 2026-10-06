@@ -1,0 +1,18 @@
+---
+- name: Install Elasticsearch
+  hosts: elasticsearch
+  become: true
+  roles:
+    - elasticsearch
+
+- name: Install Kibana
+  hosts: kibana
+  become: true
+  roles:
+    - kibana
+
+- name: Install Logstash
+  hosts: logstash
+  become: true
+  roles:
+    - logstash
